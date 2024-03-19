@@ -1,0 +1,37 @@
+info:
+  contact: {}
+paths:
+  /leagues/champion/cl:
+    get:
+      consumes:
+      - application/json
+      description: get cl league
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      summary: get cl league
+      tags:
+      - League
+  /leagues/champion/stsl/:
+    get:
+      consumes:
+      - application/json
+      description: get stsl league
+      parameters:
+      - description: fair
+        in: query
+        name: fair
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Grouped widget data
+          schema:
+            type: string
+      summary: get stsl league
+      tags:
+      - League
+swagger: "2.0"

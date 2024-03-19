@@ -1,0 +1,59 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "contact": {}
+    },
+    "paths": {
+        "/leagues/champion/cl": {
+            "get": {
+                "description": "get cl league",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "League"
+                ],
+                "summary": "get cl league",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/leagues/champion/stsl/": {
+            "get": {
+                "description": "get stsl league",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "League"
+                ],
+                "summary": "get stsl league",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "fair",
+                        "name": "fair",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Grouped widget data",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
