@@ -1,5 +1,5 @@
 package interfaces
 
 type LeagueService interface {
-	GetChampions(fairly int) string
+	GetChampions(fairly int) (string, error)
 }

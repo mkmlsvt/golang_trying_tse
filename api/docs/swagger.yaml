@@ -1,11 +1,16 @@
 info:
   contact: {}
 paths:
-  /leagues/champion/cl:
+  /leagues/champion/cl/:
     get:
       consumes:
       - application/json
       description: get cl league
+      parameters:
+      - description: fair
+        in: query
+        name: fair
+        type: integer
       produces:
       - application/json
       responses:

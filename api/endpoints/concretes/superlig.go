@@ -31,7 +31,7 @@ func (s SuperLigEndpoint) Name() string {
 func (s SuperLigEndpoint) Get() fiber.Handler {
 	return func(ctx *fiber.Ctx) error {
 		fairly, _ := strconv.Atoi(ctx.Params("fair"))
-		championTeam := s.service.GetChampions(fairly)
+		championTeam, _ := s.service.GetChampions(fairly)
 		return ctx.JSON(championTeam)
 	}
 }

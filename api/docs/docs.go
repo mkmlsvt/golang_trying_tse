@@ -15,7 +15,7 @@ const docTemplate = `{
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
     "paths": {
-        "/leagues/champion/cl": {
+        "/leagues/champion/cl/": {
             "get": {
                 "description": "get cl league",
                 "consumes": [
@@ -28,6 +28,14 @@ const docTemplate = `{
                     "League"
                 ],
                 "summary": "get cl league",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "fair",
+                        "name": "fair",
+                        "in": "query"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "OK"

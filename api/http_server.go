@@ -2,6 +2,7 @@ package api
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"net/http"
 	"sync"
@@ -36,7 +37,7 @@ func (s httpServer) Start(ctx context.Context, wg *sync.WaitGroup) {
 	go func() {
 		defer wg.Done()
 		fmt.Printf("http server starting on %s", s.port)
-		if err := s.fiberApp.Listen(s.port); err != nil && err != http.ErrServerClosed {
+		if err := s.fiberApp.Listen(s.port); err != nil && !errors.Is(err, http.ErrServerClosed) {
 			fmt.Printf(err.Error())
 		}
 	}()

@@ -5,6 +5,7 @@ go 1.21.1
 require (
 	github.com/gofiber/fiber/v2 v2.52.2
 	github.com/gofiber/swagger v1.0.0
+	github.com/sony/gobreaker v0.5.0
 	github.com/stretchr/testify v1.9.0
 	github.com/swaggo/swag v1.16.3
 )
